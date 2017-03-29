@@ -1,0 +1,30 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgray;
+}
+
+.cooling-chambers {
+  background-color: #4454ff;
+  color: #000000;
+  font-weight: bold;
+}
+
+.heating-chambers {
+  background-color: #ff2c18;
+  color: #000000;
+  font-weight: bold;
+}
+
+.project-name {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.selections {
+  padding-right: 2em;
+}

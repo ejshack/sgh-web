@@ -1,0 +1,194 @@
+extends layout
+append styles
+    // Custom styles for this template
+    link(href='stylesheets/style.css', rel='stylesheet')
+block body
+    .container.main-contain
+        // Static navbar
+        nav.navbar.navbar-default
+            .container-fluid
+                .navbar-header
+                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand.project-name(href='#') Smart Miniature Greenhouse
+                #navbar.navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href='#') Home
+                        li
+                            a(href='#') About
+                        li
+                            a(href='#') Contact
+                        li.dropdown
+                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                                | Dropdown
+                                span.caret
+                            ul.dropdown-menu(role='menu')
+                                li
+                                    a(href='#') Action
+                                li
+                                    a(href='#') Another action
+                                li
+                                    a(href='#') Something else here
+                                li.divider
+                                li.dropdown-header Nav header
+                                li
+                                    a(href='#') Separated link
+                                li
+                                    a(href='#') One more separated link
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href='#') Login
+                        li
+                            a(href='#') Register
+
+        // Main component for a primary marketing message or call to action
+        .jumbotron
+            h1.welcome Small Chamber Sensor Data
+            br
+            p.welcome
+                | Select a chamber to update the graphs below. Below each graph, you can set the range of
+                | values to display on the graph. Login for chamber control capability.
+            hr
+            br
+            ul.nav.navbar-nav
+                li.dropdown
+                    button.btn.btn-default.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                        | Chamber Selection
+                        span.caret
+                    ul.dropdown-menu(role='menu')
+                        li.dropdown-header(class='cooling-chambers') Cooling Chambers
+                        li.chamber-list
+                            a(href='#myChart', onclick='chamberAlert("Chamber 1")') Chamber 1
+                        li.chamber-list
+                            a(href='#myChart', onclick='chamberAlert("Chamber 2")') Chamber 2
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 3")') Chamber 3
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 4")') Chamber 4
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 5")') Chamber 5
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 6")') Chamber 6
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 7")') Chamber 7
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 8")') Chamber 8
+                        li.divider
+                        li.dropdown-header(class='heating-chambers') Heating Chambers
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 9")') Chamber 9
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 10")') Chamber 10
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 11")') Chamber 11
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 12")') Chamber 12
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 13")') Chamber 13
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 14")') Chamber 14
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 15")') Chamber 15
+                        li
+                            a(href='#myChart', onclick='chamberAlert("Chamber 16")') Chamber 16
+            p.nav.navbar-nav.navbar-right
+                a.btn.btn-default.btn-primary(href='#', role='button') Update Graphs »
+        br
+        hr
+        br
+    .container
+        .container
+            canvas(id="myChart" width="200" height="100")
+        br
+        if true
+            .container-fluid
+                ul.nav.navbar-nav
+                    li.dropdown
+                        label.selections Select starting value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | First Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        label.selections Select ending value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | Last Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
+        br
+        hr
+        br
+        br
+    .container
+        .container
+            canvas(id="myChart1" width="200" height="100")
+        br
+        if true
+            .container-fluid
+                ul.nav.navbar-nav
+                    li.dropdown
+                        label.selections Select starting value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | First Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        label.selections Select ending value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | Last Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
+        br
+        hr
+        br
+        br
+    .container
+        .container
+            canvas(id="myChart2" width="200" height="100")
+        br
+        if true
+            .container-fluid
+                ul.nav.navbar-nav
+                    li.dropdown
+                        label.selections Select starting value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | First Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        label.selections Select ending value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | Last Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
+        br
+        hr
+        br
+        br
+    .container
+        .container
+            canvas(id="myChart3" width="200" height="100")
+        br
+        if true
+            .container-fluid
+                ul.nav.navbar-nav
+                    li.dropdown
+                        label.selections Select starting value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | First Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        label.selections Select ending value:
+                        button.btn.btn-primary.dropdown-toggle.dropdown(data-toggle='dropdown', aria-expanded='false')
+                            | Last Value
+                            span.caret
+                        ul.dropdown-menu(role='menu')
